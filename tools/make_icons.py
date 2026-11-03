@@ -1,7 +1,7 @@
 """Draw the app icon: a single candle flame on the parchment background.
 
 Run with PyMuPDF available (e.g. the API repo's venv):
-  ../ignatius-hw4-api/.venv/bin/python tools/make_icons.py
+  ../ignatius-at-home-api/.venv/bin/python tools/make_icons.py
 """
 
 from pathlib import Path

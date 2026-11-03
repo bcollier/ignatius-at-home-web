@@ -5,7 +5,7 @@
 // Talk page reads the same companion prompt, and the server uses the rest in each job.
 
 let myAgents = {}; // {agent id: the person's own prompt}, loaded at sign-in
-const AGENT_SOURCE = "https://github.com/bcollier/ignatius-hw4-api/blob/main/app/agent_prompts/";
+const AGENT_SOURCE = "https://github.com/bcollier/ignatius-at-home-api/blob/main/app/agent_prompts/";
 
 const myAgentPrompt = (id) => myAgents[id] || "";
 

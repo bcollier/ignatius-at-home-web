@@ -11,15 +11,17 @@
   <img src="docs/screenshots/iphone-hero.png" alt="Ignatius at Home on three iPhones: the library, the praying screen with Rembrandt's Return of the Prodigal Son, and Day 3 of the Come and See retreat with Carl Bloch's Woman at the Well" width="860">
 </p>
 
-This repository is the **frontend**: plain HTML, CSS and JavaScript, no framework and no build step, served by GitHub Pages and installable on a phone's home screen. The backend is [ignatius-hw4-api](https://github.com/bcollier/ignatius-hw4-api), a FastAPI service on Render.
+This repository is the **frontend**: plain HTML, CSS and JavaScript, no framework and no build step, served by GitHub Pages and installable on a phone's home screen. The backend is [ignatius-at-home-api](https://github.com/bcollier/ignatius-at-home-api), a FastAPI service on Render.
+
+**Version 2.0, November 2026.** The project has new names, `ignatius-at-home-web` for this app and `ignatius-at-home-api` for the backend. Links to the old addresses still lead here.
 
 ---
 
-> ## 📐 How it all works: [ARCHITECTURE.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/ARCHITECTURE.md)
+> ## 📐 How it all works: [ARCHITECTURE.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/ARCHITECTURE.md)
 >
 > The full technical documentation lives in the API repo, with 26 diagrams: the system and hosting on GitHub Pages, Render and Supabase, the database ERD, sign-in and guest flows, how a retreat is made step by step, the research services, the prayer player, Talk it over, example retreats, the research page, status lifecycles, every API endpoint with examples, costs, security and failure handling.
 >
-> **Live app:** https://bcollier.github.io/ignatius-hw4-web/ · **Backend repo:** [ignatius-hw4-api](https://github.com/bcollier/ignatius-hw4-api) · **Every prompt used to build it:** [PROMPT_LOG.md](PROMPT_LOG.md) · **Original design spec and build plan:** [design spec](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/original-spec/design-spec.md), [technical spec](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/original-spec/technical-spec.md), [build plan](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/original-spec/staging-plan.md) · **Redesign spec:** [IMPROVEMENTS.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/IMPROVEMENTS.md) · **Visual redesign spec:** [VISUAL_REDESIGN.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/VISUAL_REDESIGN.md) · **Code review guidance:** [CODE_REVIEW.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/CODE_REVIEW.md)
+> **Live app:** https://bcollier.github.io/ignatius-at-home-web/ · **Backend repo:** [ignatius-at-home-api](https://github.com/bcollier/ignatius-at-home-api) · **Every prompt used to build it:** [PROMPT_LOG.md](PROMPT_LOG.md) · **Original design spec and build plan:** [design spec](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/original-spec/design-spec.md), [technical spec](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/original-spec/technical-spec.md), [build plan](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/original-spec/staging-plan.md) · **Redesign spec:** [IMPROVEMENTS.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/IMPROVEMENTS.md) · **Visual redesign spec:** [VISUAL_REDESIGN.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/VISUAL_REDESIGN.md) · **Code review guidance:** [CODE_REVIEW.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/CODE_REVIEW.md)
 
 ## Contents
 
@@ -51,7 +53,7 @@ This repository is the **frontend**: plain HTML, CSS and JavaScript, no framewor
 
 ## 1. Why this exists
 
-This started as a submission for **Homework 4 of CMU's 15-113**, which asks for server-side code deployed on [Render](https://render.com) with a web front end. The assignment could have been anything; I chose a problem from my own prayer life.
+It began with a problem from my own prayer life.
 
 Every week I pray with a parish **retreat in daily life**: a months-long walk through the *Spiritual Exercises* of Saint Ignatius, with a printed handout for each week holding the scripture passages, a grace to ask for, notes and a painting or two. The handout is good, but praying from paper at 6 a.m. is hard, and the texts deserve more than a quick read. What I wanted was someone to *read* the passage to me, slowly, several times; to offer a short reflection that meets me where I am; to tell me what the scholars know about the passage; and then to leave me in silence. So the app does that, from whatever material I give it.
 
@@ -123,7 +125,7 @@ A **retreat** is time set apart from ordinary life for prayer. It can be a weeke
 
 The app prays each day as a lectio divina: the passage is **heard four times**, each time with a different focus, and the reflection and deep dive are woven between the readings like the meditation of a monk turning the text over. There is a long silence between two bells for contemplation, and the colloquy at the end for prayer in one's own words.
 
-Further reading is in section 22 and on the app's [About page](https://bcollier.github.io/ignatius-hw4-web/?about).
+Further reading is in section 22 and on the app's [About page](https://bcollier.github.io/ignatius-at-home-web/?about).
 
 ---
 
@@ -229,7 +231,7 @@ At first sign-in everyone, including guests, finds two ready-made retreats under
 
 The examples are **listen only**: you can pray them, mark days prayed, write the word that stayed, change the start date, print the script, read the research and talk them over, but not rewrite, re-record, rename or delete them. Your progress in an example is yours alone; nobody else sees it.
 
-**The package.** *Come and See: Seven Encounters with Jesus* was made for this project (source and script in the API repo's [`samples/demo/`](https://github.com/bcollier/ignatius-hw4-api/tree/main/samples/demo)). Each day is a moment when someone meets Jesus in the Gospels, with a grace to ask for and a public-domain painting:
+**The package.** *Come and See: Seven Encounters with Jesus* was made for this project (source and script in the API repo's [`samples/demo/`](https://github.com/bcollier/ignatius-at-home-api/tree/main/samples/demo)). Each day is a moment when someone meets Jesus in the Gospels, with a grace to ask for and a public-domain painting:
 
 | Day | Title | Passage (World English Bible) | Grace | Painting |
 | --- | --- | --- | --- | --- |
@@ -258,7 +260,7 @@ The paintings were chosen for drama and for how well they invite imaginative pra
 | `./?r=ID&research` | **Research** | Desktop only. For each day: the passage and notes from the document, the searches, every result with its service, which were cited. See section 11. |
 | `./?talk&r=ID` | **Talk it over** | Start/end, a timer, a live transcript, past conversations with **Forget all our conversations**, and a plain statement that this is an AI, with the 988 lifeline. |
 | `./?me` | **Settings** (linked at the bottom of every page) | First, **About me**: type or upload (text, Markdown, Word, PDF, or a Google Doc link) what you'd like the app to know about you, with a note if a long file was condensed, and what you want from the conversation companion. Then your account (sign out, sign in on your phone) and a switch to show technical details (build logs and costs). |
-| `./?about` | **About** | The Spiritual Exercises, retreats, lectio divina, how a day is prayed, [every voice with a sample to play](https://bcollier.github.io/ignatius-hw4-web/?about#voices), [each research service](https://bcollier.github.io/ignatius-hw4-web/?about#research), links. Readable without signing in. |
+| `./?about` | **About** | The Spiritual Exercises, retreats, lectio divina, how a day is prayed, [every voice with a sample to play](https://bcollier.github.io/ignatius-at-home-web/?about#voices), [each research service](https://bcollier.github.io/ignatius-at-home-web/?about#research), links. Readable without signing in. |
 
 Views are plain `<section>`s in `index.html`; the router shows one at a time based on the query string, so every view has a real, shareable, back-button-friendly URL.
 
@@ -266,7 +268,7 @@ Views are plain `<section>`s in `index.html`; the router shows one at a time bas
 
 ## 7. Voices: hear them and compare
 
-Every part of a day is read by a synthetic voice, and each part can have its own. GitHub can't play audio inside a README, so each sample below is a link that plays in your browser. Better still, the app's **[About page](https://bcollier.github.io/ignatius-hw4-web/?about#voices)** has all twelve side by side with players. Every sample reads the same words: John 20:16 from the World English Bible, then a line of guidance:
+Every part of a day is read by a synthetic voice, and each part can have its own. GitHub can't play audio inside a README, so each sample below is a link that plays in your browser. Better still, the app's **[About page](https://bcollier.github.io/ignatius-at-home-web/?about#voices)** has all twelve side by side with players. Every sample reads the same words: John 20:16 from the World English Bible, then a line of guidance:
 
 > Jesus said to her, "Mary." She turned and said to him, "Rabboni!" which is to say, "Teacher!" Take a moment now. Let the name spoken to you settle in your heart, and notice what stirs.
 
@@ -274,12 +276,12 @@ Every part of a day is read by a synthetic voice, and each part can have its own
 
 | Voice | Character | Listen |
 | --- | --- | --- |
-| Andrew | warm, male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/free-andrew.mp3) |
-| Ava | caring, female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/free-ava.mp3) |
-| Brian | easygoing, male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/free-brian.mp3) |
-| Emma | clear, female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/free-emma.mp3) |
-| Christopher | steady, male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/free-christopher.mp3) |
-| Aria | confident, female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/free-aria.mp3) |
+| Andrew | warm, male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/free-andrew.mp3) |
+| Ava | caring, female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/free-ava.mp3) |
+| Brian | easygoing, male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/free-brian.mp3) |
+| Emma | clear, female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/free-emma.mp3) |
+| Christopher | steady, male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/free-christopher.mp3) |
+| Aria | confident, female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/free-aria.mp3) |
 
 These are Microsoft's neural voices, reached through the Edge browser's "Read aloud" service with the open-source [edge-tts](https://github.com/rany2/edge-tts) package. **Strengths:** they cost nothing, need no account or key, are clear and even, pronounce scripture names well, and are fast (the server records six pieces at once). **Weaknesses:** the pacing is steadier and less expressive than a human reader; long scripts have to be recorded in pieces of about 400 characters, so the tone can shift slightly between sentences; and because the service is unofficial it sometimes drops a connection, so the server retries each piece up to four times with growing waits (a real test build lost two clips before that was added).
 
@@ -287,12 +289,12 @@ These are Microsoft's neural voices, reached through the Edge browser's "Read al
 
 | Voice | Character | Listen |
 | --- | --- | --- |
-| Brian | deep, comforting, male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/premium-brian.mp3) |
-| George | warm storyteller, British male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/premium-george.mp3) |
-| Bill | wise, mature, male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/premium-bill.mp3) |
-| Sarah | reassuring, female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/premium-sarah.mp3) |
-| Alice | clear educator, British female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/premium-alice.mp3) |
-| Lily | velvety, British female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/voices/premium-lily.mp3) |
+| Brian | deep, comforting, male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/premium-brian.mp3) |
+| George | warm storyteller, British male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/premium-george.mp3) |
+| Bill | wise, mature, male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/premium-bill.mp3) |
+| Sarah | reassuring, female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/premium-sarah.mp3) |
+| Alice | clear educator, British female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/premium-alice.mp3) |
+| Lily | velvety, British female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/voices/premium-lily.mp3) |
 
 **Why someone would choose the premium voices.** Listen to the two Brians back to back. [ElevenLabs](https://elevenlabs.io) voices *perform* the text: they breathe, slow down before something important, lower their voice for "Mary," and let a pause sit. For most apps that's a nicety. For prayer it matters a great deal, because the whole point is to listen for twenty minutes in the dark and be drawn in rather than informed. A reflection read by a voice that sounds like it means it lands differently. ElevenLabs also holds one voice consistently across long passages: the app records in pieces of about 2,500 characters and sends each piece with the text before it (`previous_text`), so the joins are seamless. One lesson from building the premium example: ElevenLabs plans limit how many requests can run at once (three on the Starter plan), and a day's many short guidance clips all started together and were refused. The server now sends at most two at a time and retries a refusal, and **Try again** on a day re-records only the clips that failed, from the saved scripts. The costs: about 10,000 to 15,000 characters for a whole day, charged against the account's monthly credits, so premium voices are limited to allowlisted accounts. The premium example retreat lets everyone hear them.
 
@@ -325,40 +327,40 @@ A spoken conversation, in real time, about the retreat. The companion knows the 
 
 ### What the conversation voices sound like
 
-Every voice below says the same line: *"Hello. I'm glad you're here. What stayed with you from today's prayer?"* The samples were recorded with each company's text-to-speech, so they're close to, but a little more formal than, the same voice in a live conversation. xAI's API lists each voice's gender, but gives no other description; listening is the honest way to choose. OpenAI's other ten live voices (Vesper, Willow, Quartz, Meridian, Stone, Gleam, Beacon, Delta, Cinder, Ripple) exist only in live conversation, so they have no sample; start a conversation to hear them. In the app, the **Talk it over** page has a **Change voice** link with "▶ Hear this voice" button next to the voice picker, and the [About page](https://bcollier.github.io/ignatius-hw4-web/?about#talk-voices) has a player for each.
+Every voice below says the same line: *"Hello. I'm glad you're here. What stayed with you from today's prayer?"* The samples were recorded with each company's text-to-speech, so they're close to, but a little more formal than, the same voice in a live conversation. xAI's API lists each voice's gender, but gives no other description; listening is the honest way to choose. OpenAI's other ten live voices (Vesper, Willow, Quartz, Meridian, Stone, Gleam, Beacon, Delta, Cinder, Ripple) exist only in live conversation, so they have no sample; start a conversation to hear them. In the app, the **Talk it over** page has a **Change voice** link with "▶ Hear this voice" button next to the voice picker, and the [About page](https://bcollier.github.io/ignatius-at-home-web/?about#talk-voices) has a player for each.
 
 | Voice | Service | Gender | Sample |
 | --- | --- | --- | --- |
-| Marin | OpenAI | — | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/openai-marin.mp3) |
-| Cedar | OpenAI | — | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/openai-cedar.mp3) |
-| Altair | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-altair.mp3) |
-| Ara | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-ara.mp3) |
-| Atlas | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-atlas.mp3) |
-| Aurora | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-aurora.mp3) |
-| Carina | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-carina.mp3) |
-| Castor | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-castor.mp3) |
-| Celeste | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-celeste.mp3) |
-| Cosmo | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-cosmo.mp3) |
-| Eve | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-eve.mp3) |
-| Helios | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-helios.mp3) |
-| Helix | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-helix.mp3) |
-| Iris | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-iris.mp3) |
-| Kepler | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-kepler.mp3) |
-| Leo | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-leo.mp3) |
-| Liora | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-liora.mp3) |
-| Lumen | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-lumen.mp3) |
-| Luna | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-luna.mp3) |
-| Lux | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-lux.mp3) |
-| Naksh | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-naksh.mp3) |
-| Orion | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-orion.mp3) |
-| Perseus | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-perseus.mp3) |
-| Rex | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-rex.mp3) |
-| Rigel | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-rigel.mp3) |
-| Sal | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-sal.mp3) |
-| Sirius | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-sirius.mp3) |
-| Ursa | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-ursa.mp3) |
-| Zagan | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-zagan.mp3) |
-| Zenith | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-hw4-web/samples/talk/xai-zenith.mp3) |
+| Marin | OpenAI | — | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/openai-marin.mp3) |
+| Cedar | OpenAI | — | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/openai-cedar.mp3) |
+| Altair | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-altair.mp3) |
+| Ara | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-ara.mp3) |
+| Atlas | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-atlas.mp3) |
+| Aurora | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-aurora.mp3) |
+| Carina | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-carina.mp3) |
+| Castor | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-castor.mp3) |
+| Celeste | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-celeste.mp3) |
+| Cosmo | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-cosmo.mp3) |
+| Eve | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-eve.mp3) |
+| Helios | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-helios.mp3) |
+| Helix | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-helix.mp3) |
+| Iris | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-iris.mp3) |
+| Kepler | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-kepler.mp3) |
+| Leo | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-leo.mp3) |
+| Liora | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-liora.mp3) |
+| Lumen | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-lumen.mp3) |
+| Luna | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-luna.mp3) |
+| Lux | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-lux.mp3) |
+| Naksh | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-naksh.mp3) |
+| Orion | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-orion.mp3) |
+| Perseus | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-perseus.mp3) |
+| Rex | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-rex.mp3) |
+| Rigel | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-rigel.mp3) |
+| Sal | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-sal.mp3) |
+| Sirius | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-sirius.mp3) |
+| Ursa | xAI Grok | female | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-ursa.mp3) |
+| Zagan | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-zagan.mp3) |
+| Zenith | xAI Grok | male | [▶ Listen](https://bcollier.github.io/ignatius-at-home-web/samples/talk/xai-zenith.mp3) |
 
 ---
 
@@ -414,7 +416,7 @@ Every call to every model starts with the same **background**: the Exercises and
 
 ### Changing how the agents behave
 
-Every prompt the app sends to a model lives in one folder in the backend, **[`app/agent_prompts/`](https://github.com/bcollier/ignatius-hw4-api/tree/main/app/agent_prompts)**. Its [README](https://github.com/bcollier/ignatius-hw4-api/blob/main/app/agent_prompts/README.md) is the index.
+Every prompt the app sends to a model lives in one folder in the backend, **[`app/agent_prompts/`](https://github.com/bcollier/ignatius-at-home-api/tree/main/app/agent_prompts)**. Its [README](https://github.com/bcollier/ignatius-at-home-api/blob/main/app/agent_prompts/README.md) is the index.
 
 | Agent | File | Also editable in the app |
 | --- | --- | --- |
@@ -505,7 +507,7 @@ Most praying happens on a phone, often in the dark, often with the screen locked
 
 ## 16. Frontend architecture
 
-**No build step.** `index.html` (every view, the prayer screen, the settings dialog), `style.css` (tokens, then layout by view), and the app in plain scripts under `js/`, one per view, sharing one global scope and loaded in order: `core.js` (constants, helpers, the API client), `look.js` (icons, color from the paintings, words for days), `settings.js` (the Advanced tab and the estimate), `router.js` (views and sign-in), `library.js`, `new-retreat.js`, `retreat.js`, `build-log.js`, `research.js`, `pray.js` (the prayer player), `about-me.js`, `talk.js`, `costs.js`, and `start.js` (wiring and start-up, last). No framework, no bundler, no npm. It loads instantly and anyone can read it. See [CODE_CLEANUP.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/CODE_CLEANUP.md) for how the code is organized and kept readable.
+**No build step.** `index.html` (every view, the prayer screen, the settings dialog), `style.css` (tokens, then layout by view), and the app in plain scripts under `js/`, one per view, sharing one global scope and loaded in order: `core.js` (constants, helpers, the API client), `look.js` (icons, color from the paintings, words for days), `settings.js` (the Advanced tab and the estimate), `router.js` (views and sign-in), `library.js`, `new-retreat.js`, `retreat.js`, `build-log.js`, `research.js`, `pray.js` (the prayer player), `about-me.js`, `talk.js`, `costs.js`, and `start.js` (wiring and start-up, last). No framework, no bundler, no npm. It loads instantly and anyone can read it. See [CODE_CLEANUP.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/CODE_CLEANUP.md) for how the code is organized and kept readable.
 
 **Cache busting.** Script and stylesheet links carry a version (`js/core.js?v=33`), bumped on every release, because GitHub Pages and phones cache aggressively; a stale script once made the play button unclickable.
 
@@ -569,10 +571,10 @@ Every error comes back as `{"error": {"status", "message"}}` with a message writ
 
 ```bash
 # terminal 1: the API (see the API repo's README for keys; none are needed for a first run)
-cd ignatius-hw4-api && .venv/bin/uvicorn app.main:app --reload --port 8000
+cd ignatius-at-home-api && .venv/bin/uvicorn app.main:app --reload --port 8000
 
 # terminal 2: this page
-cd ignatius-hw4-web && python3 -m http.server 5500
+cd ignatius-at-home-web && python3 -m http.server 5500
 ```
 
 Open <http://localhost:5500>. `config.js` points at `localhost:8000` automatically. With no Supabase settings the API uses a single local user and local files, so there's nothing to sign in to.
@@ -589,29 +591,29 @@ Settings → Pages → Deploy from branch → `main`, `/ (root)`. Every push to 
 
 ## 20. How it was built: a journal
 
-The whole app was built in conversation with **Claude Code** (Claude Opus 5.5, with one design review by Claude Fable 5.1) over two days in September 2026, from a design made the day before. Every prompt is in [PROMPT_LOG.md](PROMPT_LOG.md). In outline:
+The whole app was built in conversation with **Claude Code** (Claude Opus 5.5, with one design review by Claude Fable 5.1) over two days in September 2026, from a design made the day before. Version 1.0 was first written as a class project, CMU 15-113's Homework 4, which asked for server-side code on [Render](https://render.com) with a web front end. Version 2.0 carries on from it as its own project. Every prompt is in [PROMPT_LOG.md](PROMPT_LOG.md). In outline:
 
 ### The method: spec-driven, in phases
 
 This wasn't built by asking for features one at a time. Each big step started from a written spec, was built against it, and was then reviewed against it:
 
-1. **Spec first.** Before any code: a [design spec](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/original-spec/design-spec.md), a [technical spec](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/original-spec/technical-spec.md), screen designs and a [build plan](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/original-spec/staging-plan.md) (September 24 to 25).
+1. **Spec first.** Before any code: a [design spec](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/original-spec/design-spec.md), a [technical spec](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/original-spec/technical-spec.md), screen designs and a [build plan](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/original-spec/staging-plan.md) (September 24 to 25).
 2. **Build to the spec.** The iPhone plan was scoped down to what the class project needed, a server and a web app anyone can use with their own material, and built against the spec's core: the lectio day, the reflection for the heart, the close reading, two voice tiers, a model that plans the days from a handout (September 25 to 26).
-3. **A large spec-driven revision.** Claude Fable reviewed the working app, visually and in use, and wrote a redesign spec, [IMPROVEMENTS.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/IMPROVEMENTS.md). The app was then rebuilt to it: one step to make a retreat, the library, listening progress, the full-screen prayer screen, the journal, the installable app.
-4. **A deep code cleanup.** A full readability audit on Clean Code principles: small functions that do one thing, names that say what they mean, no magic numbers, one place for one idea, comments that explain why, no dead code. The 730-line `main.py` became a thin app module plus one routes module per area; the 2,391-line `app.js` became thirteen scripts, one per view; the 155-line function that makes a day became an 11-line one running a small class whose steps read in order. All recorded in [CODE_CLEANUP.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/CODE_CLEANUP.md). Reviews since follow the [code review guidance](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/CODE_REVIEW.md), which turns those principles and the bugs found on iPhones into checklists.
-5. **The prompts, rewritten from a brief.** Claude Fable wrote the planning, reflection, deep dive and companion prompts from a [brief](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/prompt-design/README.md) describing the whole app; they live as files in [app/prompt_texts](https://github.com/bcollier/ignatius-hw4-api/tree/main/app/prompt_texts).
-6. **A visual redesign from a spec.** First a written direction, then seven mockups in Claude Design (Today at dawn and at night, praying, the silence, a prayed day gilded, a day as a two-page spread, the library), approved with one change ("books" became "retreats"), then built: the [visual redesign spec, with the mockups](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/VISUAL_REDESIGN.md), and the result in [section 12](#12-design-choices).
+3. **A large spec-driven revision.** Claude Fable reviewed the working app, visually and in use, and wrote a redesign spec, [IMPROVEMENTS.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/IMPROVEMENTS.md). The app was then rebuilt to it: one step to make a retreat, the library, listening progress, the full-screen prayer screen, the journal, the installable app.
+4. **A deep code cleanup.** A full readability audit on Clean Code principles: small functions that do one thing, names that say what they mean, no magic numbers, one place for one idea, comments that explain why, no dead code. The 730-line `main.py` became a thin app module plus one routes module per area; the 2,391-line `app.js` became thirteen scripts, one per view; the 155-line function that makes a day became an 11-line one running a small class whose steps read in order. All recorded in [CODE_CLEANUP.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/CODE_CLEANUP.md). Reviews since follow the [code review guidance](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/CODE_REVIEW.md), which turns those principles and the bugs found on iPhones into checklists.
+5. **The prompts, rewritten from a brief.** Claude Fable wrote the planning, reflection, deep dive and companion prompts from a [brief](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/prompt-design/README.md) describing the whole app; they live as files in [app/prompt_texts](https://github.com/bcollier/ignatius-at-home-api/tree/main/app/prompt_texts).
+6. **A visual redesign from a spec.** First a written direction, then seven mockups in Claude Design (Today at dawn and at night, praying, the silence, a prayed day gilded, a day as a two-page spread, the library), approved with one change ("books" became "retreats"), then built: the [visual redesign spec, with the mockups](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/VISUAL_REDESIGN.md), and the result in [section 12](#12-design-choices).
 7. **Then testing on a real iPhone.** Each problem seen on the phone went back in as a prompt, was fixed and checked at iPhone size in Safari's engine, and was logged in [PROMPT_LOG.md](PROMPT_LOG.md), all 160-odd of them.
 
 The journal below is the same story day by day.
 
 **Wednesday night into Thursday, September 24 to 25: the original design.** The idea began with a real retreat: a 19th Annotation program (the Spiritual Exercises in daily life, September to May) that came as weekly handout PDFs. In a long session with Claude, the handouts first became daily documents with a close reading and a reflection "for listening", and a question about what it would cost to turn them into audio (Microsoft's free voices, a middle tier, and ElevenLabs and OpenAI's live voice at the high end). That grew into a plan for a native iPhone app, written up as four pieces:
-- the [design spec](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/original-spec/design-spec.md): three sections a day (the Reading, A Word for You in Christ's voice, and The Text Up Close) in a lectio sequence, a pause to journal, three voices per tier, and a start date the user chooses;
+- the [design spec](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/original-spec/design-spec.md): three sections a day (the Reading, A Word for You in Christ's voice, and The Text Up Close) in a lectio sequence, a pause to journal, three voices per tier, and a start date the user chooses;
 - the voices and a virtual director: a live spoken companion, with its costs and safety;
-- the [technical spec](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/original-spec/technical-spec.md): SwiftUI on iPhone and a Google Cloud pipeline (Cloud Run, Firestore, Workflows, Claude on Vertex AI);
-- twenty screen designs in Claude Design (working name "Wellspring"), and the [build plan](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/original-spec/staging-plan.md): six to eight weeks to TestFlight with Claude Code and Codex working in parallel.
+- the [technical spec](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/original-spec/technical-spec.md): SwiftUI on iPhone and a Google Cloud pipeline (Cloud Run, Firestore, Workflows, Claude on Vertex AI);
+- twenty screen designs in Claude Design (working name "Wellspring"), and the [build plan](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/original-spec/staging-plan.md): six to eight weeks to TestFlight with Claude Code and Codex working in parallel.
 
-The planning repository's first commit was at 1:27 a.m. Eastern on Thursday, September 25; it was renamed **Ignatius at Home** at 4:54 p.m. that afternoon. The documents are copied in [docs/original-spec](https://github.com/bcollier/ignatius-hw4-api/tree/main/docs/original-spec).
+The planning repository's first commit was at 1:27 a.m. Eastern on Thursday, September 25; it was renamed **Ignatius at Home** at 4:54 p.m. that afternoon. The documents are copied in [docs/original-spec](https://github.com/bcollier/ignatius-at-home-api/tree/main/docs/original-spec).
 
 **Thursday evening, September 25.**
 - Pulled that iPhone design, read the HW4 assignment, and scoped a server-plus-web version: upload a PDF exercise, get three MP3s (reading, heart, deep dive).
@@ -629,7 +631,7 @@ The planning repository's first commit was at 1:27 a.m. Eastern on Thursday, Sep
 - Web research for free mode: Tavily, then Exa, Brave Search, Brave Answers, Firecrawl and Linkup, each wrapped to pause itself when out of credits; the printable PDF; a log table of every model call.
 - Resuming jobs interrupted by a redeploy; series of retreats week by week; no limit on retreats.
 
-**Friday evening: the redesign.** Claude Fable reviewed the app visually and in flow and wrote a redesign spec ([IMPROVEMENTS.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/IMPROVEMENTS.md)), which became: one step with Simple and Advanced tabs; the library with Continue; listening progress and missed days; the full-screen painting and docked player on phones; the journal after praying; the installable icon; the About page. Then, as requests came in: parts that know about each other; the background briefing for every model; About me; Talk it over with OpenAI and Grok, memory, and awareness of time and progress; costs only while making.
+**Friday evening: the redesign.** Claude Fable reviewed the app visually and in flow and wrote a redesign spec ([IMPROVEMENTS.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/IMPROVEMENTS.md)), which became: one step with Simple and Advanced tabs; the library with Continue; listening progress and missed days; the full-screen painting and docked player on phones; the journal after praying; the installable icon; the About page. Then, as requests came in: parts that know about each other; the background briefing for every model; About me; Talk it over with OpenAI and Grok, memory, and awareness of time and progress; costs only while making.
 
 **Friday night: the demo.** The "Come and See" package; two example retreats (free, and Claude Fable with ElevenLabs); all research services combined; the research page; voice samples; these READMEs and screenshots; the full prompt log.
 
@@ -663,7 +665,7 @@ Everything a free account uses costs nothing to run; the premium pieces are paid
 | Service | What it is | What it does here | Why it's free |
 | --- | --- | --- | --- |
 | [GitHub Pages](https://pages.github.com) | Static web hosting from a GitHub repository | Serves this web app: the HTML, CSS, JavaScript, icons, paintings, the example and practice audio | Free for public repositories |
-| [Render](https://render.com) | A cloud platform that builds and runs web services straight from a Git repository | Runs the Python server ([ignatius-hw4-api](https://github.com/bcollier/ignatius-hw4-api)): FastAPI and Uvicorn on Python 3.12, from a `render.yaml` Blueprint, redeployed automatically on every push, checked at `/api/health`. It extracts documents, runs the background jobs that plan, write and record retreats, and talks to every other service | The free web service. It sleeps after 15 minutes without visitors and takes up to a minute to wake (hence the waiting screen with its breathing circle and quotes), and its disk is temporary, so everything is kept in Supabase. A paid instance (about $7 a month) stays awake |
+| [Render](https://render.com) | A cloud platform that builds and runs web services straight from a Git repository | Runs the Python server ([ignatius-at-home-api](https://github.com/bcollier/ignatius-at-home-api)): FastAPI and Uvicorn on Python 3.12, from a `render.yaml` Blueprint, redeployed automatically on every push, checked at `/api/health`. It extracts documents, runs the background jobs that plan, write and record retreats, and talks to every other service | The free web service. It sleeps after 15 minutes without visitors and takes up to a minute to wake (hence the waiting screen with its breathing circle and quotes), and its disk is temporary, so everything is kept in Supabase. A paid instance (about $7 a month) stays awake |
 | [Supabase](https://supabase.com) | Hosted Postgres with sign-in and file storage | Sign-in (email links, guests, the Home Screen code), the `retreats` table, the `llm_calls` log of every model call, and a private bucket for the audio, paintings, research records and notes | The free plan |
 | [Jetstream2](https://jetstream-cloud.org) | An NSF-funded academic cloud (Indiana University) with an OpenAI-compatible model API | Writes every free-mode retreat: Muse Glimmer (default, reads images) and Llama 4 Scout | An academic allocation: this is a class project. See below for other free options |
 | Microsoft neural voices, through [edge-tts](https://github.com/rany2/edge-tts) | The voices of Microsoft Edge's Read Aloud, reached through an open-source Python package | Every free voice: Ava, Andrew, Christopher, Emma, Brian, Aria, Ryan and Sonia, with word timings for following the text | No key and no cost. It's unofficial; an app for the public should use [Azure AI Speech](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support), which has a free monthly allowance and then charges per character |
@@ -717,6 +719,6 @@ A model that can't read images still works: planning falls back to the text alon
 - Voices: [edge-tts](https://github.com/rany2/edge-tts) (Microsoft), [ElevenLabs](https://elevenlabs.io); conversation: [OpenAI](https://platform.openai.com), [xAI](https://x.ai)
 - Research: [Brave Search API](https://brave.com/search/api/), [Exa](https://exa.ai), [Tavily](https://tavily.com), [Firecrawl](https://firecrawl.dev), [Linkup](https://linkup.so)
 
-**Built with** [Claude Code](https://claude.com/claude-code). Every prompt: [PROMPT_LOG.md](PROMPT_LOG.md). Architecture: [ARCHITECTURE.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/ARCHITECTURE.md). Code organization and readability: [CODE_CLEANUP.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/CODE_CLEANUP.md).
+**Built with** [Claude Code](https://claude.com/claude-code). Every prompt: [PROMPT_LOG.md](PROMPT_LOG.md). Architecture: [ARCHITECTURE.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/ARCHITECTURE.md). Code organization and readability: [CODE_CLEANUP.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/CODE_CLEANUP.md).
 
 *The reflections, deep dives and guidance are written by AI models from your material, and the voices are synthetic. Treat them as a companion to your own prayer and, if you have one, your spiritual director, not a replacement.*

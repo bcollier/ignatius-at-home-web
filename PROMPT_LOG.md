@@ -1,10 +1,10 @@
 # Prompt log
 
-HW4 asks for a log of the AI tools and models used and the prompts given. This project was built with **Claude Code** (Claude Opus 5.5, with Claude Fable 5.1 for the redesign review and the rewritten prompts) from Thursday evening, September 25, to Sunday, September 27, 2026, from an original design written September 24–25 ([docs/original-spec](https://github.com/bcollier/ignatius-hw4-api/tree/main/docs/original-spec)). Below is **every prompt** the author typed, 283 in all, in order and word for word (typos kept), each with a line on what was done in response. Attached screenshots are marked in italics or `[screenshot]`. No secret keys were ever typed into a prompt; a signed Storage token inside one pasted URL is redacted, and one long, personal "About me" the author pasted (prompt 184) is described rather than reproduced.
+This is the log of the AI tools and models used to build Ignatius at Home and the prompts given. Version 1.0 began as a class project (CMU 15-113, Homework 4), which asked for this log. The project was built with **Claude Code** (Claude Opus 5.5, with Claude Fable 5.1 for the redesign review and the rewritten prompts) from Thursday evening, September 25, to Sunday, September 27, 2026, from an original design written September 24–25 ([docs/original-spec](https://github.com/bcollier/ignatius-at-home-api/tree/main/docs/original-spec)). Below is **every prompt** the author typed, 285 in all, in order and word for word (typos kept), each with a line on what was done in response. Attached screenshots are marked in italics or `[screenshot]`. No secret keys were ever typed into a prompt; a signed Storage token inside one pasted URL is redacted, and one long, personal "About me" the author pasted (prompt 184) is described rather than reproduced.
 
-**How it was built, in phases** (details in the [frontend README](https://github.com/bcollier/ignatius-hw4-web#the-method-spec-driven-in-phases)): spec first; building to the spec; a large spec-driven revision from [IMPROVEMENTS.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/IMPROVEMENTS.md); a Clean Code cleanup ([CODE_CLEANUP.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/CODE_CLEANUP.md)); the prompts rewritten from a brief; a visual redesign from approved mockups ([VISUAL_REDESIGN.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/VISUAL_REDESIGN.md)); then new features (guided practices, the Examen, retreats from an idea or a photo) and testing on a real iPhone, where each problem seen on the phone came back as a prompt here. The last prompts are documentation, a security review ([CODE_REVIEW.md](https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/CODE_REVIEW.md) holds the review checklist), the sign-in email, and the portfolio entry.
+**How it was built, in phases** (details in the [frontend README](https://github.com/bcollier/ignatius-at-home-web#the-method-spec-driven-in-phases)): spec first; building to the spec; a large spec-driven revision from [IMPROVEMENTS.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/IMPROVEMENTS.md); a Clean Code cleanup ([CODE_CLEANUP.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/CODE_CLEANUP.md)); the prompts rewritten from a brief; a visual redesign from approved mockups ([VISUAL_REDESIGN.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/VISUAL_REDESIGN.md)); then new features (guided practices, the Examen, retreats from an idea or a photo) and testing on a real iPhone, where each problem seen on the phone came back as a prompt here. The last prompts are documentation, a security review ([CODE_REVIEW.md](https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/CODE_REVIEW.md) holds the review checklist), the sign-in email, and the portfolio entry.
 
-The same log is in both repositories: [API](https://github.com/bcollier/ignatius-hw4-api/blob/main/PROMPT_LOG.md) and [web](https://github.com/bcollier/ignatius-hw4-web/blob/main/PROMPT_LOG.md).
+The same log is in both repositories: [API](https://github.com/bcollier/ignatius-at-home-api/blob/main/PROMPT_LOG.md) and [web](https://github.com/bcollier/ignatius-at-home-web/blob/main/PROMPT_LOG.md).
 
 ## Tools and models
 
@@ -12,7 +12,7 @@ The same log is in both repositories: [API](https://github.com/bcollier/ignatius
 | --- | --- | --- |
 | Building the app | Claude Code with Claude Opus 5.5 | Planning, all code and tests, running local servers and builds, testing in Chrome, screenshots, docs |
 | Building the app | Claude Fable 5.1 | The redesign review that became docs/IMPROVEMENTS.md; the planning, reflection, deep dive and companion prompts (docs/prompt-design); the premium example retreat |
-| Building the app | Claude Design | The seven redesign mockups (https://github.com/bcollier/ignatius-hw4-api/blob/main/docs/VISUAL_REDESIGN.md) |
+| Building the app | Claude Design | The seven redesign mockups (https://github.com/bcollier/ignatius-at-home-api/blob/main/docs/VISUAL_REDESIGN.md) |
 | Building the app | Playwright (WebKit) and Puppeteer (Chrome), gitleaks, pip-audit | Testing at iPhone size in Safari's engine, screenshots, the secret scan and dependency audit |
 | Inside the app, premium | Claude Opus 5.5 (default), Opus 5, Fable 5.1, Sonnet 5, Haiku 4.5, through OpenRouter's Anthropic-compatible API | Planning retreats (structured JSON), reflections, deep dives with web search, tailoring the guidance, choosing passages for an idea, writing guided practices and your own Examen, condensing About me |
 | Inside the app, free | Muse Glimmer (default) and Llama 4 Scout on Jetstream (academic allocation) | The same jobs, with server-side web research |
@@ -1824,9 +1824,21 @@ Added it to the scale study as variant v2 and started it on the three cheap judg
 
 **What was done:** Wrote docs/NOTES_FOR_CLAUDE.md in the API repo: repos, local run and testing, standing rules, what shipped, open setup to-dos, things not yet verified on the iPhone, doc links, and the next step. Added a memory entry pointing to it. Committed the sleep prayers' word-timing files and pushed both repos.
 
+### 284. 2026-11-03, 02:45 UTC
+
+> change https://bcollier.github.io/ignatius-hw4-web/ so it doesn't mention hw 4 as the main feature of the project, change the name of the project and the api
+
+**What was done:** Version 2.0. The repositories were renamed from `ignatius-hw4-web` and `ignatius-hw4-api` to `ignatius-at-home-web` and `ignatius-at-home-api`, keeping their history (the plain name `ignatius-at-home` already belongs to the private planning repository from September, so the app is `-web`), and every link in the code and docs now uses the new names. The app moved to https://bcollier.github.io/ignatius-at-home-web/, and a small redirect repository keeps the old address working, path, query and sign-in link included. The READMEs and this log now open with the app itself; the class project (Homework 4) is a one-line note on where version 1.0 came from. Render can't change a service's onrender.com address, so the API's new address needs a new Render service, which waits on the secret keys being entered in Render.
+
+### 285. 2026-11-03, 02:46 UTC
+
+> or if it is easier you could create new repos, and start version 2.0
+
+**What was done:** Renaming was easier than new repositories: it keeps the commit history, the GitHub Actions secrets and the Pages settings. GitHub forwards links to the old API repository, and the redirect repository, which now holds the old web name, forwards the old app address and points to the new repository. It is labelled version 2.0 in both READMEs.
+
 ---
 
-*End of the log. The original design came from an earlier, separate session (September 24–25; see [docs/original-spec](https://github.com/bcollier/ignatius-hw4-api/tree/main/docs/original-spec)); every change made to these two repositories after it came from one of the prompts above. Account settings the author changed by hand, such as the Supabase email settings, are described where they came up.*
+*End of the log. The original design came from an earlier, separate session (September 24–25; see [docs/original-spec](https://github.com/bcollier/ignatius-at-home-api/tree/main/docs/original-spec)); every change made to these two repositories after it came from one of the prompts above. Account settings the author changed by hand, such as the Supabase email settings, are described where they came up.*
 
 ## Prompts the app sends to models
 
